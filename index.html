@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Juego Web</title>
+<style>
+body{
+    margin:0;
+    background:#0f172a;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+}
+#game{
+    margin-top:40px;
+}
+button{
+    padding:12px 20px;
+    font-size:16px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+.enemy{
+    font-size:24px;
+    margin:20px;
+}
+</style>
+</head>
+<body>
+
+<h1>⚔️ Mi Juego RPG</h1>
+
+<div id="game">
+    <p>Creá tu personaje</p>
+    <input id="name" placeholder="Nombre del héroe">
+    <br><br>
+    <button onclick="startGame()">Comenzar</button>
+
+    <div id="battle" style="display:none;">
+        <h2 id="player"></h2>
+        <div class="enemy">👹 Enemigo: Goblin</div>
+        <p id="log"></p>
+        <button onclick="attack()">Atacar</button>
+    </div>
+</div>
+
+<script src="game.js"></script>
+
+</body>
+</html>
